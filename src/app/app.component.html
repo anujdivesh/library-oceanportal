@@ -1,0 +1,47 @@
+<div style="background-color: #165C7D; padding-top: 2px; padding-bottom: 20px;">
+
+  <div style="background-color: white;" align="center">
+    <div style="background-color: white; width: 1170px; height: 94px" align="center">
+      <img align="left" style="height: 90px; margin-right: 10px; margin-top: 2px;" src="https://www.spc.int/sites/default/files/logo.png"/>
+
+      <h1 align="left"
+          style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 73px; font-weight: lighter; margin-top: 20px;">
+        Pacific Ocean Portal</h1>
+
+    </div>
+  </div>
+</div>
+
+
+<div align="center">
+  <div align="left" style="width: 1170px">
+    <br/>
+
+
+    <mat-grid-list cols="4" rowHeight="500px">
+
+      <mat-grid-tile *ngFor="let d of docs">
+
+        <mat-card style="width: 220px;">
+          <mat-card-header>
+            <div mat-card-avatar style="background-size: cover"></div>
+            <mat-card-subtitle>{{d.category}}</mat-card-subtitle>
+            <mat-card-title style="height: 30px; font-weight: bolder;">{{d.title}}</mat-card-title>
+
+          </mat-card-header>
+          <img align="center" mat-card-image style="height: 300px; width: 240px; align-content: center;"
+               src="assets/{{d.file.replace('.pdf', '.png')}}" alt="{{d.title}}">
+
+          <mat-card-actions>
+            <button mat-raised-button color="primary"><a style="text-decoration: none; color: white;" href="assets/{{d.file}}">Download</a></button>
+
+          </mat-card-actions>
+        </mat-card>
+
+
+      </mat-grid-tile>
+
+    </mat-grid-list>
+
+  </div>
+</div>
